@@ -16,10 +16,6 @@ connectDB();
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/todos", todoRoutes);
 
-app.get("/", (req, res) => {
-  res.send("API is running...");
-});
-
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server is running at ${port}`);
